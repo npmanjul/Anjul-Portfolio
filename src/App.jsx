@@ -22,7 +22,7 @@ const App = () => {
               <Route path="/project" element={<Project />} />
               {/* <Route path="*" element={<NotFound />} /> */}
             </Routes>
-            <Nav />
+              <Nav />
           </Router>
         </div>
       </div>

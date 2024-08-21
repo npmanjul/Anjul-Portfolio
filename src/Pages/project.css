@@ -1,0 +1,29 @@
+.project-conatiner
+{
+    
+    position: relative;
+}
+
+.project-heading
+{
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    font-weight: 700;
+}
+
+
+.project-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    gap: 2rem;
+    padding-bottom: 8rem;
+}

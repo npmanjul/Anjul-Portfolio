@@ -1,0 +1,75 @@
+.projectcard-container {
+    height: 290px;
+    width: auto;
+    background-color: rgba(166, 163, 163, 0.263);
+    border-radius: 10px;
+    padding: 15px;
+    border: 1.4px solid rgba(255, 255, 255, 0.368);
+}
+
+.projectcard-image {
+    border-radius: 15px;
+}
+
+.projectcard-image img {
+    height: 180px;
+    width: 330px;
+    border-radius: 6px;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+.project-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.github-btn {
+    height: 35px;
+    width: 155px;
+    background-color: rgb(222, 117, 117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.liveLink_btn {
+    height: 35px;
+    width: 155px;
+    background-color: rgba(142, 142, 145, 0.217);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.331);
+}
+
+.arrow-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.1rem;
+}
+
+.arrow-icon a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.arrow-icon img {
+    height: 24px;
+}
