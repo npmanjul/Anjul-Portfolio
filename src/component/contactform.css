@@ -63,10 +63,17 @@
 }
 
 
-@media (max-width:355px) {
+@media (max-width:375px) {
     form{
         padding:0  1rem ;
     }
+
+    .inputfield-area textarea{
+        height: 170px;
+    }
+}
+
+@media (max-width:355px) {
 
     .inputfield-area textarea{
         height: 150px;
