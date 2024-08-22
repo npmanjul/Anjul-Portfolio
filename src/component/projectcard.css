@@ -9,6 +9,9 @@
 
 .projectcard-image {
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projectcard-image img {
@@ -72,4 +75,67 @@
 
 .arrow-icon img {
     height: 24px;
+}
+
+@media (max-width:410px) {
+    .projectcard-container {
+        height: 287px;
+    }
+    
+    .projectcard-image img {
+        height: 180px;
+        width: 300px;
+    }
+
+    .github-btn {
+        height: 35px;
+        width: 135px;
+    }
+    
+    .liveLink_btn {
+        height: 35px;
+        width: 145px;
+    }
+}
+
+@media (max-width:370px) {
+    .projectcard-container {
+        height: 280px;
+    }
+    
+    .projectcard-image img {
+        height: 170px;
+        width: 290px;
+    }
+
+    .github-btn {
+        height: 35px;
+        width: 125px;
+    }
+    
+    .liveLink_btn {
+        height: 35px;
+        width: 145px;
+    }
+}
+
+@media (max-width:358px) {
+    .projectcard-container {
+        height: 255px;
+    }
+    
+    .projectcard-image img {
+        height: 150px;
+        width: 250px;
+    }
+
+    .github-btn {
+        height: 35px;
+        width: 105px;
+    }
+    
+    .liveLink_btn {
+        height: 35px;
+        width: 138px;
+    }
 }

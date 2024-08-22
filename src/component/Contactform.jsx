@@ -23,6 +23,9 @@ const Contactform = () => {
             <label for="bio">Message: </label>
             <textarea id="bio" name="bio" rows="5" cols="33" placeholder="Tell us a bit about yourself"></textarea>
         </div>
+        <div className='contactus-submit-btn'>
+            <button>Submit</button>
+        </div>
         </form>
         
     </>

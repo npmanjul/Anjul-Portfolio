@@ -43,3 +43,35 @@
     resize: none;
 }
 
+.contactus-submit-btn
+{
+    width: 100%;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.contactus-submit-btn button
+{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(169, 227, 227);
+    border-radius: 50px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-weight:700 ;
+}
+
+
+@media (max-width:355px) {
+    form{
+        padding:0  1rem ;
+    }
+
+    .inputfield-area textarea{
+        height: 150px;
+    }
+}
+
+
+
