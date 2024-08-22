@@ -1,0 +1,25 @@
+.servicescard-container
+{
+    height: 270px;
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid rgba(255, 255, 255, 0.397);
+    border-radius: 10px;
+    gap: 0.9rem;
+    
+}
+
+.servicescard-image img
+{
+    height: 70px;
+}
+
+.servicescard-description
+{
+    width: 70%;
+    text-align: justify;
+}
