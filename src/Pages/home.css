@@ -188,6 +188,11 @@
     {
         padding: 0 30px;
     }
+
+    .home-right-container
+    {
+        padding-bottom: 4rem;
+    }
 }
 
 @media (max-width:500px){

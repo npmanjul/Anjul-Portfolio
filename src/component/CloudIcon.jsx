@@ -71,7 +71,7 @@ const DynamicIconCloud = () => {
     clickToFront: 500,
     tooltipDelay: 0,
     outlineColour: '#0000',
-    maxSpeed: 0.21,
+    maxSpeed: 0.11,
     minSpeed: 0.01,
   };
 
