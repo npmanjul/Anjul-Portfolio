@@ -7,15 +7,15 @@ import code from '../assets/AboutUs/coding.png'
 const services=[
     {
         image:webImg,
-        description:"Has deep understanding of Frontend as well as Backend Frameworks with Github and AWS."
+        description:"Possesses a deep understanding of both frontend and backend frameworks, along with proficiency in GitHub and AWS."
     },
     {
         image:uiux,
-        description:"Has deep understanding of Frontend as well as Backend Frameworks with Github and AWS."
+        description:"Skilled in designing visually appealing user interfaces that provide a positive and user-friendly experience."
     },
     {
         image:code,
-        description:"Has deep understanding of Frontend as well as Backend Frameworks with Github and AWS."
+        description:"Strong understanding of data structures and algorithms, with experience solving over 400+ problems."
     },
 ]
 

@@ -5,7 +5,7 @@
     align-items: center;
     /* width: 75%; */
     margin: 0 12rem;
-    gap: 4rem;
+    gap: 3rem;
     border: 3px solid rgb(99, 98, 96);
     border-radius: 15px;
     background-color: rgba(254, 254, 254, 0.162);
@@ -30,6 +30,7 @@
 {
     height: 260px;
     border-radius: 50%;
+    pointer-events: none;
 }
 
 @media (max-width:1450px) {

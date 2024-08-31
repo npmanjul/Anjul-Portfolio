@@ -4,7 +4,8 @@ import './contactform.css'
 const Contactform = () => {
   return (
     <>
-        <form action="/submit-form" method="post">
+        <form action="https://formspree.io/f/xanwvryk"
+  method="POST">
         <div className='inputfield-area'>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required autoComplete='off'/>
@@ -24,7 +25,7 @@ const Contactform = () => {
             <textarea id="bio" name="bio" rows="5" cols="33" placeholder="Tell us a bit about yourself"></textarea>
         </div>
         <div className='contactus-submit-btn'>
-            <button>Submit</button>
+            <button type='submit'>Submit</button>
         </div>
         </form>
         

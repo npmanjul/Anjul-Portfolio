@@ -41,6 +41,7 @@
 
 .btn-icon img {
     height: 30px;
+    pointer-events: none;
 
 }
 

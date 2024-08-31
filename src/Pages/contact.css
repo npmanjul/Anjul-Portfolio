@@ -51,6 +51,11 @@
     font-weight: 700;
 }
 
+.detail-heading a{
+    text-decoration: none;
+    color: white;
+}
+
 .contact-socialmedia-box {
     display: flex;
     justify-content: center;
@@ -73,6 +78,7 @@
 .socialmedia-icon img {
     height: 30px;
     filter: invert(1);
+    pointer-events: none;
 }
 
 .contact-form {

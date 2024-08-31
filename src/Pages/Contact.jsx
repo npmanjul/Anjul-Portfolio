@@ -19,10 +19,12 @@ const Contact = () => {
             </div>
             <div>
               <div className='detail-heading'>
-                <span >Email :</span> anjulsingh462@gmail.com
+                <span >Email : </span> 
+                <a href="mailto:anjulsingh462@gmail.com">anjulsingh462@gmail.com</a> 
               </div>
               <div className='detail-heading'>
-                <span>Phone No. :</span> 7523801921
+                <span>Phone No. : </span>
+                <a href="tel:+917523801921">7523801921</a>
               </div>
             </div>
           </div>
@@ -30,13 +32,40 @@ const Contact = () => {
             <div className='contact-detail-heading'>
               Social Media
             </div>
-            <div className='contact-socialmedia-box'>
-                <div className='socialmedia-icon'><img src={githubIcon} alt="GitHub" /></div>
-                <div className='socialmedia-icon'><img src={linkedInIcon} alt="LinkedIn" /></div>
-                <div className='socialmedia-icon'><img src={instaIcon} alt="Instagram" /></div>
-                <div className='socialmedia-icon'><img src={twitterIcon} alt="Twitter" /></div>
-                <div className='socialmedia-icon'><img src={mailIcon} alt="Mail" /></div>
-            </div>
+            <div className="contact-socialmedia-box">
+                <a href="https://github.com/npmanjul" target="_blank">
+                  <div className="socialmedia-icon">
+                    <img src={githubIcon} alt="GitHub" />
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/anjul-singh-3500a1219/" target="_blank">
+                  <div className="socialmedia-icon">
+                    <img src={linkedInIcon} alt="LinkedIn" />
+                  </div>
+                </a>
+
+                <a href="https://www.instagram.com/anjul__s/" target="_blank">
+                  <div className="socialmedia-icon">
+                    <img src={instaIcon} alt="Instagram" />
+                  </div>
+                </a>
+
+                <a href="https://x.com/Anjul__s" target="_blank">
+                  <div className="socialmedia-icon">
+                    <img src={twitterIcon} alt="Twitter" />
+                  </div>
+                </a>
+
+
+                <a href="mailto:anjulsingh462@gmail.com?subject=Hello,%20I%20am%20anjul">
+                  <div className="socialmedia-icon">
+                    <img src={mailIcon} alt="Mail" />
+                  </div>
+                </a>
+
+              </div>
+        
           </div>
         </div>
         <div className='contact-form'>

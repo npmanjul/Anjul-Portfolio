@@ -16,6 +16,7 @@
 .servicescard-image img
 {
     height: 70px;
+    pointer-events: none;
 }
 
 .servicescard-description

@@ -25,4 +25,5 @@ background-color: rgba(60, 54, 54, 0.988);
 .tech-icon img
 {
     height: 50px;
+    pointer-events: none;
 }
