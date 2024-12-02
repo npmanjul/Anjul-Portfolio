@@ -7,8 +7,16 @@ const Aboutprofile = () => {
     <>
       <div className='aboutusprofile-container'>
         <div className='aboutusprofile-image'><img src={profileImg} /></div>
-        <div className='aboutusprofile-description'>Anjul Singh is a B.Tech student in Information Technology at Madan Mohan Malaviya University of Technology, with a CGPA of 7.5. He has a strong command of programming languages like C, C++, and Java, alongside expertise in data structures, algorithms, and web development using React.js, Node.js, and databases like MongoDB. During his internships, Anjul built websites from scratch for MMMUT Foundation and Pushpak Drone Viman Pvt Ltd, significantly enhancing their digital presence and user experience. His projects include a Google Gemini Clone with AI capabilities, an Online Compiler for real-time coding, and a responsive Weather App. Anjul's work is showcased on GitHub, LeetCode, and CodeChef, where he continues to develop innovative solutions.
+        <div className='aboutusprofile-description'>
+          Anjul Singh 3rd Year B.Tech Student, Information Technology
+          Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur, U.P.
+          <br />
+          <br />
+          I am a dedicated and skilled Information Technology student with a strong command of programming languages such as C, C++, Java, and JavaScript. I specialize in data structures, algorithms, and full-stack web development using the MERN stack. Additionally, I am advancing my expertise in Android development with React Native.
+          <br />
+          <br />
 
+          I have contributed my technical skills to organizations such as MMMUT Reso, Pushpak Drone Viman, and MMMUT Foundation, where I played a key role in building projects from the ground up. My work has focused on developing impactful solutions and enhancing organizational capabilities through innovative technologies.
         </div>
       </div>
     </>

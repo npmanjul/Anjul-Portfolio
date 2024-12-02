@@ -15,6 +15,8 @@ const Home = () => {
     const typed = new Typed(typedElement.current, {
       strings: [
         "Web Developer",
+        "Android Developer",
+        "Wordpress Developer",
         "Frontend Developer",
         "Backend Developer",
         "Web Designing",

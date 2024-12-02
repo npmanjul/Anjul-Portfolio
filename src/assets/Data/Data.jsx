@@ -7,10 +7,29 @@ import Calculator from '../project/calci.png'
 import OTP_generator from '../project/otp.png'
 import pdv from '../project/pushpak.png'
 import mmmut_foundation from '../project/mmmut_foundation.png'
-
-
+import codeEditor from '../project/codeEditor.png'
+import mmmutreso from '../project/mmmutreso.png'
+import jobportal from '../project/jobportal.png'
+import samgra from '../project/samgra.jpg'
 
 const data=[
+  {
+      
+    "id": 11,
+    "projectName": "MMMUT Reso",
+    "image": mmmutreso,
+    "githubLink": "https://student.mmmut.xyz/",
+    "liveLink": "https://student.mmmut.xyz/"
+  },
+
+  {
+      
+    "id": 12,
+    "projectName": "Talent Bridge",
+    "image": jobportal,
+    "githubLink": "https://talentbridge-1yxp.onrender.com/",
+    "liveLink": "https://talentbridge-1yxp.onrender.com/"
+  },
   {
     "id": 9,
     "projectName": "MMMUT Foundation",
@@ -25,7 +44,14 @@ const data=[
     "githubLink": "",
     "liveLink": "https://www.pushpakdroneviman.in/"
   },
-  
+    {
+      
+        "id": 10,
+        "projectName": "XCode Editor",
+        "image": codeEditor,
+        "githubLink": "https://github.com/npmanjul/Code-Editor.git",
+        "liveLink": "https://code-editor-zeta-tan.vercel.app/"
+      },
     {
       
         "id": 1,

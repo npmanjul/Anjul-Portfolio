@@ -21,6 +21,10 @@ import mongodb from '../assets/Tech icon/mongodb.png'
 import mysql from '../assets/Tech icon/mysql.png'
 import digitalocean from '../assets/Tech icon/digitalocean.png'
 import gitvcs from '../assets/Tech icon/git.png'
+import android from '../assets/Tech icon/android.png'
+import aws from '../assets/Tech icon/aws.png'
+import chakraui from '../assets/Tech icon/chakraui.png'
+import wordpress from '../assets/Tech icon/wordpress.png'
 
 
 
@@ -50,11 +54,24 @@ const skills = [
     },
     {
         id: 6,
+        icon: android,
+    },
+    {
+        id: 6,
         icon: tailwind,
+    },
+    {
+        id: 6,
+        icon: chakraui,
     },
     {
         id: 7,
         icon: bootstrap,
+    },
+   
+    {
+        id: 8,
+        icon: wordpress,
     },
     {
         id: 8,
@@ -64,6 +81,7 @@ const skills = [
         id: 9,
         icon: css,
     },
+    
     {
         id: 10,
         icon: javascript,
@@ -83,6 +101,10 @@ const skills = [
     {
         id: 14,
         icon: c,
+    },
+    {
+        id: 8,
+        icon: aws,
     },
     {
         id: 15,
