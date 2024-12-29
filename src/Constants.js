@@ -1,0 +1,1 @@
+export const HOST_URL = 'https://portfolio-backend-eight-ashen.vercel.app/api/v1'

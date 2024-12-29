@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './aboutprofile.css';
-import profileImg from '../assets/anjulimg.png'
+import { HOST_URL } from '../Constants';
 
 const Aboutprofile = () => {
+  const [about, setAbout] = useState("")
+  const [image, setImage] = useState("")
+
+  const getAbout = async () => {
+    try {
+      const response = await fetch(`${HOST_URL}/about/getAbout`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+
+      const data = await response.json()
+      setImage(data.about[0].image)
+      setAbout(data.about[0].about)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getAbout()
+  }, [])
+
   return (
     <>
-      <div className='aboutusprofile-container'>
-        <div className='aboutusprofile-image'><img src={profileImg} /></div>
+      <div className='aboutusprofile-container' >
+        <div className='aboutusprofile-image'><img src={image} /></div>
         <div className='aboutusprofile-description'>
-          Anjul Singh 3rd Year B.Tech Student, Information Technology
-          Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur, U.P.
-          <br />
-          <br />
-          I am a dedicated and skilled Information Technology student with a strong command of programming languages such as C, C++, Java, and JavaScript. I specialize in data structures, algorithms, and full-stack web development using the MERN stack. Additionally, I am advancing my expertise in Android development with React Native.
-          <br />
-          <br />
-
-          I have contributed my technical skills to organizations such as MMMUT Reso, Pushpak Drone Viman, and MMMUT Foundation, where I played a key role in building projects from the ground up. My work has focused on developing impactful solutions and enhancing organizational capabilities through innovative technologies.
+        {about}
         </div>
       </div>
     </>

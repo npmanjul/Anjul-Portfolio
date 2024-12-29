@@ -1,150 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './tech.css'
-import github from '../assets/github-fill.png'
-import react from '../assets/Tech icon/react.png'
-import express from '../assets/Tech icon/express.png'
-import nodejs from '../assets/Tech icon/node.png'
-import redux from '../assets/Tech icon/redux.png'
-import firebase from '../assets/Tech icon/firebase.png'
-import tailwind from '../assets/Tech icon/tailwindcss.png'
-import bootstrap from '../assets/Tech icon/bootstrap.png'
-import html from '../assets/Tech icon/html.png'
-import css from '../assets/Tech icon/css.png'
-import javascript from '../assets/Tech icon/javascript.png'
-import java from '../assets/Tech icon/java.png'
-import cpp from '../assets/Tech icon/cpp.png'
-import c from '../assets/Tech icon/c.png'
-import python from '../assets/Tech icon/pythoon.png'
-import vercal from '../assets/Tech icon/vercal.png'
-import netlify from '../assets/Tech icon/netlify.png'
-import mongodb from '../assets/Tech icon/mongodb.png'
-import mysql from '../assets/Tech icon/mysql.png'
-import digitalocean from '../assets/Tech icon/digitalocean.png'
-import gitvcs from '../assets/Tech icon/git.png'
-import android from '../assets/Tech icon/android.png'
-import aws from '../assets/Tech icon/aws.png'
-import chakraui from '../assets/Tech icon/chakraui.png'
-import wordpress from '../assets/Tech icon/wordpress.png'
-
-
-
-
-
-const skills = [
-    {
-        id: 1,
-        icon: react,
-
-    },
-    {
-        id: 2,
-        icon: express,
-    },
-    {
-        id: 3,
-        icon:nodejs ,
-    },
-    {
-        id: 4,
-        icon: redux,
-    },
-    {
-        id: 5,
-        icon: firebase,
-    },
-    {
-        id: 6,
-        icon: android,
-    },
-    {
-        id: 6,
-        icon: tailwind,
-    },
-    {
-        id: 6,
-        icon: chakraui,
-    },
-    {
-        id: 7,
-        icon: bootstrap,
-    },
-   
-    {
-        id: 8,
-        icon: wordpress,
-    },
-    {
-        id: 8,
-        icon: html,
-    },
-    {
-        id: 9,
-        icon: css,
-    },
-    
-    {
-        id: 10,
-        icon: javascript,
-    },
-    {
-        id: 11,
-        icon: java,
-    },
-    {
-        id: 12,
-        icon: python,
-    },
-    {
-        id: 13,
-        icon: cpp,
-    },
-    {
-        id: 14,
-        icon: c,
-    },
-    {
-        id: 8,
-        icon: aws,
-    },
-    {
-        id: 15,
-        icon: vercal,
-    },
-    {
-        id: 16,
-        icon: netlify,
-    },
-    {
-        id: 17,
-        icon: digitalocean,
-    },
-    {
-        id: 18,
-        icon: mongodb,
-    },
-    {
-        id: 19,
-        icon: mysql,
-    },
-    {
-        id: 20,
-        icon: gitvcs,
-    },
-    {
-        id: 21,
-        icon: github,
-    },
-    
-];
-
+import { HOST_URL } from '../Constants.js'
 
 const Tech = () => {
+    const [skills, setSkills] = useState([])
+
+    const getSkills =async () => {
+        try{
+            const response=await fetch(`${HOST_URL}/skills/getAllSkills`,{
+                method:'GET',
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+
+            const data=await response.json()
+            setSkills(data.skills)
+        }catch(error){
+            console.log(error)
+        }
+    }
+
+    const sortedSkills = skills.sort((a, b) => a.skillNumber- b.skillNumber)
+
+    useEffect(() => {
+        getSkills()
+    }, [])
+
     return (
         <>
-            {skills.map((skill) => (
+            {sortedSkills.map((skill) => (
                 <div key={skill.id} className='tech-container'>
-                    <div className='tech-icon'>
-                        <img src={skill.icon} />
+                    <div className='tech-icon' key={skill._id}>
+                        <abbr title={skill.name}>
+                        <img src={skill.image} alt={skill.name} title={skill.name}/>
+                        </abbr>
                     </div>
                 </div>
             ))}

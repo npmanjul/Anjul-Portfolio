@@ -1,52 +1,82 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './timeline.css'
+import { HOST_URL } from '../Constants';
 
 const Timeline = () => {
+  const [timeline, setTimeline] = useState([])
+
+  const getTimeline = async () => {
+    try {
+      const response = await fetch(`${HOST_URL}/experiences/getAllExperience`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+
+      const data = await response.json()
+      setTimeline(data.experiences || [])
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const sortedTimeline = timeline.sort((a, b) => a.order - b.order)
+  useEffect(() => {
+    getTimeline()
+  }, [])
+
   return (
     <>
-
-
-      <div class="timeline">
-        <div class="container left">
-          <div class="content">
-            <div className='upper-container'>
-              <div className='company-name'>MMMUT Foundation</div>
-              <div className='work-duration'>06/24-07/24</div>
+      <div className="timeline">
+        {
+          sortedTimeline.map((experience) => (
+            <div key={experience._id}>
+              {experience.order % 2 !== 0 ? (
+                <div className="container left">
+                  <div className="content">
+                    <div className="upper-container">
+                      <div className="company-name">{experience.company}</div>
+                      <div className="work-duration">{experience.startDate} / {experience.endDate}</div>
+                    </div>
+                    <div className="middle-container">
+                      {experience.description}
+                    </div>
+                    <div className="lower-container">
+                      <div className="timeline-btn">
+                        <a href={experience.link} target="_blank" rel="noopener noreferrer">
+                          <button>Live Link</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="container right">
+                  <div className="content">
+                    <div className="upper-container">
+                      <div className="company-name">{experience.company}</div>
+                      <div className="work-duration">{experience.startDate} / {experience.endDate}</div>
+                    </div>
+                    <div className="middle-container">
+                      {experience.description}
+                    </div>
+                    <div className="lower-container">
+                      <div className="timeline-btn">
+                        <a href={experience.link} target="_blank" rel="noopener noreferrer">
+                          <button>Live Link</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className='middle-container'>
-            Built a user-friendly website for MMMUT Foundation using React.js, CSS, and JavaScript, significantly enhancing their online visibility and supporting their mission.
-            </div>
-            <div className='lower-container'>
-              <div className='timeline-btn'>
-                <a href='https://mmmut-foundation-anjul.vercel.app/'  target='_blank'>
-                <button>Live Link</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <div className='upper-container'>
-              <div className='company-name'>Pushak Drone Viman</div>
-              <div className='work-duration'>02/24-05/24</div>
-            </div>
-            <div className='middle-container'>
-            Engineered a company website for Pushpak Drone Viman Pvt Ltd using React.js, CSS, and JavaScript, boosting digital footprint, product visibility, and driving sales growth through a refined online platform.
-            </div>
-            <div className='lower-container'>
-              <div className='timeline-btn'>
-              <a href='https://www.pushpakdroneviman.in/' target='_blank'>
-                <button>Live Link</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+          ))
+        }
       </div>
-
     </>
   )
 }
 
-export default Timeline
+export default Timeline;
